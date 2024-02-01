@@ -127,6 +127,13 @@
 .mobile-subnavs.open svg {
     transform: rotateX(180deg);
 }
+.product__labels span {
+    width: auto;
+    padding: 0 5px;
+}
+.card__labels span {
+    background: rgba(63, 63, 63, 0.5);
+}
 .product__price {
     align-items: center;
 }

@@ -17,7 +17,7 @@ if(document.querySelectorAll('.lazy')) {
           } 
         })
     }
-    loadImg()
+   loadImg()
     window.addEventListener("scroll", loadImg)
 }
 $(".mobile-subnavs__header").on("click", function () {

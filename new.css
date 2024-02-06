@@ -46,7 +46,9 @@
   .dropdown__link {
     width: 228px;
   }
-  
+  .menu__link svg {
+    margin-top: 0;
+  }
   .menu-subnavs__header {
     display: -webkit-box;
     display: -ms-flexbox;

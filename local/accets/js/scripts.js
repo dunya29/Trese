@@ -23,7 +23,7 @@ $(function () {
     if (fromTop > 100) {
       mainHeader.removeClass("header--dark");
       mainBurger.removeClass("burger--white");
-    } else {
+    } else if ($(".menu__item.hovered").length == 0) {
       mainHeader.addClass("header--dark");
       mainBurger.addClass("burger--white");
     }
@@ -36,6 +36,7 @@ $(function () {
   $(".menu__item").hover(
     function () {
       if ($(this).find(".dropdown").length > 0) {
+        $(this).addClass("hovered")
         $(this).find(".dropdown").slideDown();
         if ($(window).scrollTop() < 100) {
           mainHeader.removeClass("header--dark");
@@ -43,6 +44,7 @@ $(function () {
       }
     },
     function () {
+      $(this).removeClass("hovered")
       $(this).find(".dropdown").slideUp();
       if ($(window).scrollTop() < 100) {
         mainHeader.addClass("header--dark");

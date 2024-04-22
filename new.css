@@ -525,6 +525,9 @@
     color: rgba(78, 78, 78, 0.5);
     border-color: #DADADA;
   }
+  .payments-p {
+    margin-bottom: 80px;
+  }
   @media screen and (max-width: 1219px) {
     .header--dark:before {
       height: 57px;

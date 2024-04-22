@@ -30,9 +30,9 @@
     width: 62%;
     height: 100vh;
     z-index: 1;
-    -webkit-transform: translate(-25%, -50%) rotate(25.914deg);
-    -ms-transform: translate(-25%, -50%) rotate(25.914deg);
-    transform: translate(-25%, -50%) rotate(25.914deg);
+    -webkit-transform: translate3d(-25%, -50%,0) rotate(25.914deg);
+    -ms-transform: translate3d(-25%, -50%,0) rotate(25.914deg);
+    transform: translate3d(-25%, -50%,0) rotate(25.914deg);
     background: #848484;
     mix-blend-mode: multiply;
     -webkit-filter: blur(250px);
@@ -251,7 +251,265 @@
     color: #fff;
     background: #292929;
   }
-  
+  .product .pay-schedule {
+    max-width: 329px;
+    cursor: pointer;
+  }
+  .pay-schedule {
+    display: block;
+    margin-bottom: 24px;
+  }
+  .pay-schedule__top {
+    display: grid;
+    grid-template-columns: 87px 1fr;
+    align-items: start;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  .pay-schedule__icon {
+    padding: 4px 8px;
+    border-radius: 4px;
+    background: #292929;
+  }
+  .pay-schedule__info {
+    align-self: center;
+  }
+  .pay-schedule__items {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+  }
+  .pay-schedule__item {
+    padding-bottom: 12px;
+    position: relative;
+  }
+  .pay-schedule__item span {
+    color: rgba(78, 78, 78, 0.4);
+    display: block;
+  }
+  .product .pay-schedule__item span {
+    font-size: 14px;
+  }
+  .pay-schedule__item span:first-child {
+    margin-bottom: 8px;
+  }
+  .product .pay-schedule__item span:first-child {
+    font-size: 12px;
+  }
+  .pay-schedule__item:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    border-radius: 10px;
+    background: #DADADA;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  .pay-schedule__item:first-child span {
+    color: #292929 
+  }
+  .pay-schedule__item:first-child:after {
+    background: #292929 
+  }
+  .product-det {
+    margin-bottom: 24px;
+  }
+  .product-det ul {
+    margin-bottom: 0;
+  }
+  .product .product-det ul {
+    max-width: 346px;
+  }
+  .product-det ul li {
+    padding-left: 34px;
+    background: url(check.svg) top -2px left / 24px 24px no-repeat;
+    margin-bottom: 16px;
+  }
+  .product-det ul li:last-child {
+    margin-bottom: 0;
+  }
+  .product-det ul li::before {
+    content: none;
+  }
+  .product-det__btn {
+    display: inline-block;
+    color: rgba(78, 78, 78, 0.4);
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    transition: 0.3s linear;
+    margin-left: 34px;
+    margin-top: 8px;
+  }
+  .product-det__btn:hover {
+    color: #000;
+  }
+  .popup__subtitle {
+    color: rgba(78, 78, 78, 0.8);
+  }
+  .popup-schedule {
+    width: calc(100% - 40px);
+    max-width: 770px;
+    max-height: calc(100% - 80px);
+    text-align: left;
+    overflow: auto;
+  }
+  .popup-schedule__icon {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .popup-schedule .popup__wrap {
+    max-width: 644px;
+    margin: 0 auto;
+  }
+  .popup-schedule .popup__title {
+    margin: 0 0 12px;
+  }
+  .popup-schedule .popup__subtitle {
+    font-weight: 600;
+    margin: 0 0 40px;
+  }
+  .popup-schedule__add {
+    font-size: 14px;
+    color: rgba(62, 62, 62, 0.6);
+    margin: 40px 0 0;
+  }
+  .popup-schedule__add a {
+    color: rgba(62, 62, 62, 0.6);
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    transition: 0.3s linear;
+  }
+  .popup-schedule__add a:hover {
+    color: #000;
+  }
+  .popup-schedule .pay-schedule__items {
+    gap: 20px;
+  }
+  .payment-f__title {
+    margin-bottom: 30px;
+    color: #3f3f3f;
+    font-family: "Lato Semibold";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.2;
+  }
+  .payment-f__cards, .payment-f__ways {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .payment-f__cards img, .payment-f__ways img {
+    margin-right: 20px;
+  }
+  .payment-f__cards img:last-child, .payment-f__ways img:last-child {
+    margin-right: 0;
+  }
+  .payment-f__cards img {
+    max-height: 20px;
+  }
+  .payment-f__ways img {
+    max-height: 30px;
+  }
+  .payment-f__info {
+    font-size: 14px;
+    color: #B2B2B2;
+    max-width: 246px;
+  }
+  .payment-f__info a {
+    color: #B2B2B2;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    transition: 0.3s linear;
+  }
+  .payment-f__info a:hover {
+    color: #000;
+  }
+  .page-content {
+    max-width: 806px;
+    margin: 0 auto;
+  }
+  .page-content h3 {
+    margin: 0 0 24px;
+  }
+  .page-content ul, .page-content ol {
+    margin: 0 0 40px;
+  }
+  .page-content a {
+    color: #B2B2B2;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    transition: 0.3s linear;
+  }
+  .page-content a:hover {
+    color: #000
+  }
+  .page-content ul li:before {
+    width: 6px;
+    height: 6px;
+    background: #4E4E4E;
+    left: 9px;
+    top: 6px;
+  }
+  .page-content ol li {
+    padding-left: 25px;
+  }
+  .page-content ol li:before {
+    color: #4E4E4E;
+    right: calc(100% - 20px);
+  }
+  .page-content p {
+    font-size: 18px;
+  }
+  .form__radio p {
+    font-size: 14px;
+    line-height: 1.2;
+    max-width: 415px;
+  }
+  .form__radio p a {
+    display: inline-block;
+    color: rgba(78, 78, 78, 0.4);
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    transition: 0.3s linear;
+  }
+  .form__radio p a:hover {
+    color: #000;
+  }
+  .form__radio .pay-schedule {
+      display: none;
+      margin-left: 30px;
+  }  
+  .form__radio .pay-schedule p {
+    display: block;
+    margin: 10px 0 12px;
+  }  
+  .form__radio .pay-schedule__items {
+    max-width: 330px;
+  }
+  .form__radio .pay-schedule__item span:first-child {
+    font-size: 14px;
+  }
+  .form__radio input:checked + label + .pay-schedule {
+    display: block;
+  }
+  .ordering .form__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .ordering .form__btn svg {
+    margin-left: 5px;
+  }
+  .personal .form__group input {
+    border-color: #292929;
+  }
+  .personal .form__group input:disabled {
+    color: rgba(78, 78, 78, 0.5);
+    border-color: #DADADA;
+  }
   @media screen and (max-width: 1219px) {
     .header--dark:before {
       height: 57px;
@@ -261,12 +519,19 @@
       width: 100%;
     }
   }
-  
+  @media screen and (max-width: 991px) {
+    .popup-schedule {
+      max-width: 670px;
+    }
+  }
   @media screen and (max-width: 767px) {
     .banner__img:after {
-      -webkit-transform: translate(0%, -10%);
-      -ms-transform: translate(0%, -10%);
-      transform: translate(0%, -10%);
+      -webkit-transform: translate3d(0%, -10%,0);
+      -ms-transform: translate3d(0%, -10%, 0);
+      transform: translate3d(0%, -10%, 0);
+    }
+    .popup-schedule {
+      max-width: 500px;
     }
   }
   
@@ -294,4 +559,96 @@
       border-radius: 4px;
       margin: 0 3px 6px;
     }
+    .product .pay-schedule__items {
+      max-width: 280px;
+    }
+    .pay-schedule__item span {
+      font-size: 12px!important;
+    }
+    .pay-schedule__items {
+      gap: 5px;
+    }
+    .product__action {
+      display: flex;
+      flex-direction: column;
+    }
+    .product__action .pay-schedule {
+      order: 1;
+    }
+    .product .product-det ul {
+      max-width: 300px;
+    }
+    .product-det ul li {
+      padding-left: 26px;
+      background-size: 16px 16px;
+      background-position: top left;
+      margin-bottom: 12px;
+    }
+    .product-det__btn {
+      margin-left: 26px;
+    }
+    .popup-schedule {
+      width: 100%;
+      max-width: 100%;
+      max-height: calc(100% - 20px);
+      top: 20px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      transform: translate(0,0);
+    }
+    .popup-schedule__icon svg {
+      width: 87px;
+    }
+    .popup-schedule__add {
+      margin-top: 20px;
+    }
+    .popup-schedule .popup__subtitle {
+      margin-bottom: 20px;
+    }
+    .popup-schedule .pay-schedule__items {
+      gap: 8px;
+    }
+    .popup-schedule .product-det {
+      margin-bottom: 24px;
+    }
   }
+  @media screen and (max-width: 575px) {
+    .payment-f__title {
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+    .page-content h3 {
+      margin: 0 0 16px;
+    }
+    .page-content ul, .page-content ol {
+      margin: 0 0 24px;
+    }
+    .page-content ol li {
+      font-size: 14px;
+    }
+    .page-content ul li:before {
+      top: 4.5px;
+    }
+    .page-content p {
+      font-size: 14px;
+    }
+    .form__radio p {
+      font-size: 12px;
+    }
+    .form__radio .pay-schedule__items {
+      max-width: 260px;
+    }
+    .ordering .form__btn {
+      font-size: 16px;
+    }
+}
+  @media screen and (max-width: 480px) {
+    .payment-f__title {
+      margin-bottom: 0;
+      padding: 10px 0;
+    }
+    .payment-f__info {
+      max-width: 300px;
+    }
+}

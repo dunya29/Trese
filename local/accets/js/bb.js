@@ -418,24 +418,18 @@ $(function () {
   /*
    * Popup
    */
-   var redirect = getURIParametr('redirect');
-   var urls = window.location.pathname;
+ /*   var redirect = getURIParametr('redirect');
 
-   /*if(urls.search('/cart/') != -1 || urls.search('/order/') != -1){
-        //Это корзина и оформление - тут не выводим попап
-   }else{
-       if(redirect!="trendymamas"){
-           if ( $.cookie('hidePopap') != "Y" ) {
-               setTimeout(function () {
-                   $(".wrap").addClass("noscroll");
-                   $("#js-give-coupon").fadeIn(500);
-                   $("body").append('<div class="overlay" id="js-overlay"></div>');
-                   $.cookie('hidePopap', 'Y', { expires: 30, path: '/' });
-               }, 15000);
-           }
-       }
-   }*/
-
+   if(redirect!="trendymamas"){
+	if ( $.cookie('hidePopap') != "Y" ) {
+		  setTimeout(function () {
+			$(".wrap").addClass("noscroll");
+			$("#js-give-coupon").fadeIn(500);
+			$("body").append('<div class="overlay" id="js-overlay"></div>');
+			$.cookie('hidePopap', 'Y', { expires: 30, path: '/' });
+		  }, 15000);
+	}
+   } */
 
   $(".js-popup-close").on("click", function (e) {
     closedPopap(e);
@@ -875,7 +869,7 @@ $(function () {
     $(this).val() == "5" ? $('#deliveryPrice span').eq(0).css("display","none") :  $('#deliveryPrice span').eq(0).css("display","block")
     $('.reqPayments').show();
     switch($(this).val()) {
-      case '2':  //Курьер по Москве до МКАД - 450 ₽
+      case '2':  //Курьер по Москве до МКАД - 750 ₽
         $('#deliveryPrice span').eq(1).html(price+' <span class="rub">&#8381;</span>');
         $('.req3').parents('.form__group').addClass('hideBlock');
         $('.req4').parents('.form__group').addClass('hideBlock');
@@ -903,12 +897,12 @@ $(function () {
 		$('.deliveryForm .form__subtitle').show();
         break;
       case '6':  //Международная доставка - уточним
-		    $('#deliveryPrice span').eq(1).html('уточнит менеджер');
+		$('#deliveryPrice span').eq(1).html('уточнит менеджер');
         $('.req3').parents('.form__group').removeClass('hideBlock');
         $('.req4').parents('.form__group').removeClass('hideBlock');
         $('.req2').parents('.form__group').removeClass('hideBlock');
         $('#pay2').prop('checked', false).parents('.form__radio').addClass('hideBlock');
-		    $('.deliveryForm .form__subtitle').show();
+		$('.deliveryForm .form__subtitle').show();
         break;
     }
     $('.ordering__total span').eq(1).html(finalPrice+' <span class="rub">&#8381;</span>');

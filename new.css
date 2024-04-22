@@ -528,6 +528,12 @@
   .payments-p {
     margin-bottom: 80px;
   }
+  .form__group .error-text {
+    top: -17px;
+  }
+  .form__group.error {
+    margin-top: 18px;
+  }
   @media screen and (max-width: 1219px) {
     .header--dark:before {
       height: 57px;

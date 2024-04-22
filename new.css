@@ -636,6 +636,9 @@
       margin-bottom: 20px;
       font-size: 16px;
     }
+    .pay-schedule__info {
+      font-size: 14px;
+    }
     .page-content h3 {
       margin: 0 0 16px;
     }
